@@ -59,7 +59,7 @@ initCobraToolbox
 
 % changeCobraSolver('glpk','all');
 % changeCobraSolver('tomlab_cplex','all');
-% changeCobraASolver('ibm_cplex','all');
+% changeCobraSolver('ibm_cplex','all');
  changeCobraSolver ('gurobi', 'all');
 %% PROCEDURE
 % Before proceeding with the simulations, the path for the model needs to be 
