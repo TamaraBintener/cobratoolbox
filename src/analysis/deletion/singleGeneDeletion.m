@@ -85,7 +85,7 @@ if (uniqueGene == 1)
         showprogress(i/nDelGenes);
         if transcriptsPresent
             % delete all alternate transcripts
-            delGenes = model.genes(strmatch(geneList{i},model.genes));
+            delGenes = model.genes(ismember(regexprep(model.genes,'\.[0-9]+$',''),geneList{i}));
             [modelDel,hasEffect(i),constrRxnNames] = deleteModelGenes(model,delGenes);
         else
             [modelDel,hasEffect(i),constrRxnNames] = deleteModelGenes(model,geneList{i});
